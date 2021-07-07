@@ -11,6 +11,7 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class BootStrapData implements CommandLineRunner {
+
     private final AuthorRepository authorRepository;
     private final BookRepository bookRepository;
     private final PublisherRepository publisherRepository;
@@ -63,3 +64,4 @@ public class BootStrapData implements CommandLineRunner {
         System.out.println("Publisher Number of Books: " + publisher.getBooks().size());
     }
 }
+
