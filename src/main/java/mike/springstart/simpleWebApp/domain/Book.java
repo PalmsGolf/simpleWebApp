@@ -2,6 +2,7 @@ package mike.springstart.simpleWebApp.domain;
 
 import javax.persistence.*;
 import java.util.HashSet;
+import java.util.Objects;
 import java.util.Set;
 
 @Entity
@@ -87,7 +88,7 @@ public class Book {
 
         Book book = (Book) o;
 
-        return id != null ? id.equals(book.id) : book.id == null;
+        return id != null ? Objects.equals(id, book.id) : book.id == null;
     }
 
     @Override
